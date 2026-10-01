@@ -1,0 +1,9 @@
+Ticker,Asset_Class,Exposure
+SPY,Equity,US large-cap equities
+EFA,Equity,Developed markets ex-US equities
+EEM,Equity,Emerging-market equities
+IEF,Fixed Income,Intermediate US Treasuries
+TLT,Fixed Income,Long-term US Treasuries
+LQD,Fixed Income,Investment-grade corporate bonds
+GLD,Commodity,Gold
+DBC,Commodity,Broad commodities
