@@ -216,3 +216,19 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Project-generated research data
+data/raw/*.csv
+data/processed/*.csv
+data/validation/*.csv
+
+# Project-generated research outputs
+outputs/benchmarks/*.csv
+outputs/figures/*.png
+
+# Preserve empty project directories
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+!data/validation/.gitkeep
+!outputs/benchmarks/.gitkeep
+!outputs/figures/.gitkeep
