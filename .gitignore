@@ -224,6 +224,7 @@ data/validation/*.csv
 
 # Project-generated research outputs
 outputs/benchmarks/*.csv
+outputs/cvar/*.csv
 outputs/figures/*.png
 
 # Preserve empty project directories
