@@ -62,10 +62,6 @@ The main out-of-sample test period is 2019–2025 and contains 365 weekly portfo
 
 contains the final XGBoost/CVaR portfolio experiment.
 
-`MScFE_690_XGBoost.ipynb`
-
-contains the earlier baseline XGBoost analysis developed before the final CVaR experiment.
-
 ## Reported results
 
 In the M6 analysis at 10 bps transaction costs:
