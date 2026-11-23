@@ -68,24 +68,26 @@ The main out-of-sample test period is 2019–2025 and contains 365 weekly portfo
 
 ## Reported results
 
-The saved M7 results below use a transaction cost of 10 bps.
+The saved M7 results below use a transaction cost of 10 bps per unit of estimated target-weight turnover, based on the completed V4 notebook run.
 
 | Portfolio | Annualised return | Volatility | Sharpe | Realised CVaR 95% |
 |---|---:|---:|---:|---:|
-| XGBoost Base | 8.51% | 9.43% | 0.640 | 2.85% |
-| XGBoost-CVaR | 9.14% | 8.98% | 0.733 | 2.63% |
+| XGBoost Base | 8.52% | 9.43% | 0.642 | 2.85% |
+| XGBoost-CVaR | 9.20% | 8.97% | 0.739 | 2.64% |
 | NoForecast Base | 5.99% | 8.63% | 0.419 | 2.61% |
 | NoForecast-CVaR | 6.08% | 8.48% | 0.435 | 2.55% |
 
 The CVaR constraint was feasible in 262 of 365 test weeks. In the remaining 103 weeks, the unconstrained allocation was used as the operational fallback.
 
-Compared with XGBoost Base, XGBoost-CVaR had lower realised 95% CVaR and a larger maximum drawdown (−18.15% versus −17.24%). The paired block-bootstrap confidence intervals for the main performance differences include zero.
+Compared with XGBoost Base, XGBoost-CVaR had lower realised 95% CVaR but a larger maximum drawdown (−18.15% versus −17.32%). Paired block-bootstrap 95% confidence intervals for differences in annualised return, Sharpe ratio, realised 95% CVaR and maximum drawdown all include zero; the observed differences are not statistically conclusive.
 
 ## Reproducibility note
 
 Market data are obtained from Yahoo Finance. Historical adjusted prices may be revised by the data provider over time. As a result, rerunning the notebook with a later Yahoo Finance data vintage may produce small numerical differences even when the model configuration and random seeds are unchanged.
 
-The headline table uses the M7 data download. The archived M6 notebook retains the results from the earlier download.
+The headline table uses the saved M7/V4 notebook execution. The archived M6 notebook retains results from an earlier data download and version of the analysis.
+
+The research backtest uses a simplifying same-close execution convention: allocations are formed using closing-market information and assumed to be implemented at those same closes. Estimated transaction costs use changes between consecutive target portfolio weights rather than trades calculated from drifted pre-trade holdings. These assumptions are applied across the four strategies but do not establish that reported net performance is directly executable. The feasible-week comparison is a conditional diagnostic, not a standalone continuous portfolio track record.
 
 ## Repository structure
 
